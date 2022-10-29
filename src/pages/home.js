@@ -1,30 +1,28 @@
-import {Grid, Typography} from "@mui/material";
+import {Grid} from "@mui/material";
 import WeatherCard from "../component/weatherCard";
 import {useEffect, useState} from "react";
-import {api} from "../api/api";
+import {handleGetOneDayWeather} from "../api/api";
 import SelectCity from "../component/SelectCity";
+import Header from "../component/Header";
 
 const Home = () => {
-    const [currency, setCurrency] = useState('tehran');
+    const [city, setCity] = useState('tehran');
     const [cityWeather, setCityWeather] = useState({})
 
     const handleGetData = async () => {
-        const data = await api(`/data/2.5/weather?q=${currency}&lang=fa&appid=f165eb3ac71fb18e5bbcbe5de1478baa&units=metric`).then(data => data.data)
+        const data = await handleGetOneDayWeather(city)
         setCityWeather(data)
     }
 
     useEffect(() => {
         handleGetData()
-    }, [currency])
+    }, [city])
+
     return(
         <Grid container>
-            <Grid item xs={12} textAlign={'center'}>
-                <Typography variant={'h5'}>
-                    Weather App
-                </Typography>
-            </Grid>
-            <SelectCity currency={currency} setCurrency={setCurrency}/>
-            <WeatherCard cityWeather={cityWeather} city={currency}/>
+            <Header/>
+            <SelectCity currency={city} setCurrency={setCity}/>
+            <WeatherCard cityWeather={cityWeather} city={city}/>
         </Grid>
     )
 }

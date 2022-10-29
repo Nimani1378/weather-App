@@ -1,26 +1,18 @@
 import {Grid, TextField} from "@mui/material";
 import {Cities} from "../data/cities";
 
-const SelectCity = ({currency, setCurrency}) => {
+const SelectCity = ({city, setCurrency}) => {
 
     const handleChange = (event) => {
         setCurrency(event.target.value);
     };
 
-    return(
+    return (
         <Grid item xs={12} textAlign={'center'}>
-            <TextField
-                select
-                value={currency}
-                onChange={handleChange}
-                SelectProps={{
-                    native: true,
-                }}
-                variant="filled"
-            >
-                {Cities.map((option) => (
-                    <option key={option.title} value={option.title}>
-                        {option.name}
+            <TextField select value={city} onChange={handleChange} SelectProps={{native: true}} variant="filled">
+                {Cities.map((c) => (
+                    <option key={c.title} value={c.title}>
+                        {c.name}
                     </option>
                 ))}
             </TextField>
