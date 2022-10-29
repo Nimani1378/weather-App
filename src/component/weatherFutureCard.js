@@ -1,9 +1,13 @@
 import {Grid} from "@mui/material";
 
-const WeatherFutureCard = () => {
-    return(
-        <Grid>
 
+
+const WeatherFutureCard = ({cityWeatherFuture, index}) => {
+    return (
+        <Grid>
+            <Grid>
+                {cityWeatherFuture?.[index]?.main?.temp}
+            </Grid>
         </Grid>
     )
 }
