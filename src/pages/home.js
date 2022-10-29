@@ -1,4 +1,4 @@
-import {Grid, Typography, TextField} from "@mui/material";
+import {Grid, Typography} from "@mui/material";
 import WeatherCard from "../component/weatherCard";
 import {useEffect, useState} from "react";
 import {api} from "../api/api";
