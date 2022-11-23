@@ -22,7 +22,7 @@ const Home = () => {
 
     return (
         <Grid container>
-            <MainBar />
+            <MainBar cityWeather={cityWeather} currency={city} />
             <SideBar />
             <Header />
             <SelectCity currency={city} setCurrency={setCity} />
