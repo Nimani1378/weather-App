@@ -1,15 +1,32 @@
-import { Grid, Typography } from "@mui/material"
+import { Grid, Typography, TextField, Divider } from "@mui/material";
+import { CustomTextField } from '../../material/CustomTextField';
+import Select from '@mui/material/Select';
+import { Cities } from "../../data/cities";
+import SelectCity from "./SelectCity/SelectCity";
+import SelectCity1 from "./SelectCity/SelectCity1";
+import Details from "./Details/Details";
+import { Stack } from "@mui/system";
 
-const SideBar = () => {
+const SideBar = ({ currency, setCurrency, cityWeather }) => {
 
-    return(
-        <Grid item md={5} xs={12} xs={{
+
+    return (
+        <Grid item md={5} xs={12} direction="column" sx={{
             height: '100vh',
-            backgroundColor : 'white'
+            backgroundColor: '#0000001c',
+            backdropFilter: 'blur(20px)',
+            paddingX: '3%'
         }}>
-            <Typography>
-                Siedebar
-            </Typography>
+            <Stack gap={4} justifyContent="center" sx={{
+                height: '100vh',
+                width: "100%"
+            }}>
+                <SelectCity1 currency={currency} setCurrency={setCurrency} />
+                <Divider sx={{
+                    borderColor: 'text.secondary'
+                }} />
+                <Details city={currency} cityWeather={cityWeather} />
+            </Stack>
         </Grid>
     )
 }

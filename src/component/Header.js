@@ -9,7 +9,7 @@ const Header = () => {
             <Typography variant={'h5'}>
                 Weather App
             </Typography>
-            <Button onClick={()=>{toggleColorMode()}}>toggle</Button>
+            
         </Grid>
     )
 }

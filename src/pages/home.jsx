@@ -1,5 +1,4 @@
 import { Grid, Paper } from "@mui/material";
-import WeatherCard from "../component/weatherCard";
 import { useEffect, useState } from "react";
 import { handleGetOneDayWeather } from "../api/api";
 import SelectCity from "../component/SelectCity";
@@ -23,10 +22,9 @@ const Home = () => {
     return (
         <Grid container>
             <MainBar cityWeather={cityWeather} currency={city} />
-            <SideBar />
+            <SideBar currency={city} setCurrency={setCity} cityWeather={cityWeather}/>
             <Header />
             <SelectCity currency={city} setCurrency={setCity} />
-            <WeatherCard cityWeather={cityWeather} city={city} />
         </Grid>
     )
 }

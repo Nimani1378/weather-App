@@ -1,4 +1,4 @@
-import WeatherFutureCard from "../component/weatherFutureCard";
+import WeatherFutureCard from "../component/Mainbar/FiveDays/FutureCard";
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {handleGetFiveDayWeather} from "../api/api";
