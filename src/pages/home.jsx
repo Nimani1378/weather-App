@@ -4,18 +4,7 @@ import { handleGetOneDayWeather } from "../api/api";
 import MainBar from "../component/Mainbar/MainBar";
 import SideBar from "../component/SideBar/SideBar";
 
-const Home = () => {
-    const [city, setCity] = useState('tehran');
-    const [cityWeather, setCityWeather] = useState({})
-
-    const handleGetData = async () => {
-        const data = await handleGetOneDayWeather(city)
-        setCityWeather(data)
-    }
-
-    useEffect(() => {
-        handleGetData()
-    }, [city])
+const Home = ({city,setCity,cityWeather}) => {
 
     return (
         <Grid container>
