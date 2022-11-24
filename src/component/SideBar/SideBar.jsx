@@ -1,8 +1,4 @@
-import { Grid, Typography, TextField, Divider } from "@mui/material";
-import { CustomTextField } from '../../material/CustomTextField';
-import Select from '@mui/material/Select';
-import { Cities } from "../../data/cities";
-import SelectCity from "./SelectCity/SelectCity";
+import { Grid, Divider } from "@mui/material";
 import SelectCity1 from "./SelectCity/SelectCity1";
 import Details from "./Details/Details";
 import { Stack } from "@mui/system";

@@ -1,5 +1,4 @@
 import Stack from "@mui/material/Stack";
-import Select from '@mui/material/Select';
 import { Cities } from "../../../data/cities";
 import { CustomTextField } from "../../../material/CustomTextField";
 import { useState } from "react";

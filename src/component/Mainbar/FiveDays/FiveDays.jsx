@@ -2,7 +2,6 @@ import { Stack } from "@mui/material";
 import WeatherFutureCard from "./FutureCard";
 import { handleGetFiveDayWeather } from "../../../api/api";
 import { useEffect, useState } from "react";
-import FutureCard from "./FutureCard";
 
 const daysIndex = [0, 8, 16, 24, 32]
 
@@ -17,7 +16,7 @@ const FiveDays = ({city}) => {
         handleGetData().catch((e) => {
             alert(e.message);
           });
-    }, [])
+    }, [city])
     return(
         <Stack gap={3} direction='row' justifyContent={'center'}>
             {daysIndex.map(index => <WeatherFutureCard key={index} cityWeatherFuture={cityWeatherFuture[index]}/>)}

@@ -1,8 +1,6 @@
-import { Avatar, Grid, Typography,Button } from "@mui/material";
-import { red } from '@mui/material/colors';
+import { Grid, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
-import { useContext, useEffect } from "react";
-import { useState } from "react";
+import { useContext } from "react";
 import FiveDays from "./FiveDays/FiveDays";
 import { ColorModeContext } from "../../App";
 
@@ -15,16 +13,6 @@ const MainBar = ({ cityWeather, currency }) => {
     let dateTime = date + ' , ' + time;
     console.log(cityWeather);
     
-    const handleIcon = () => {
-        if (cityWeather.weather) {
-            return (
-                <Avatar sx={{
-                    color: "white"
-                }} src={`https://openweathermap.org/img/wn/${cityWeather.weather[0].icon}.png`} />
-            )
-        }
-    }
-    
     return (
         <Grid sx={{
             height: '100vh',
@@ -32,21 +20,34 @@ const MainBar = ({ cityWeather, currency }) => {
             <Stack sx={{
                 height: '48vh'
             }} />
-            <Button onClick={()=>{toggleColorMode()}}>toggle</Button>
+            {/* <Button onClick={()=>{toggleColorMode()}}>toggle</Button> */}
             <Stack direction="row" gap={2} sx={{
-                paddingLeft: '25%',
+                justifyContent : 'center',
                 alignItems: 'center',
                 marginBottom : '2vh'
             }}>
                 <Typography variant="h1" sx={{
                     color: 'text.primary',
+                    fontSize : {
+                        xs : '40px',
+                        sm : '70px',
+                        md : '70px',
+                        lg : '100px'
+                    }
                 }}>
                     {`${cityWeather?.main?.temp}°`}
                 </Typography>
                 <Stack sx={{
                     color: 'text.primary',
                 }}>
-                    <Typography variant="h3">
+                    <Typography variant="h3" sx={{
+                        fontSize : {
+                            xs : '20px',
+                            sm : '40px',
+                            md : '40px',
+                            lg : '50px',
+                        }
+                    }}>
                         {cityWeather?.name}
                     </Typography>
                     <Typography variant="body">

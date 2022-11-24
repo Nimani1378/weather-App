@@ -1,4 +1,4 @@
-import {Box, Grid, Typography} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 
 
 
@@ -10,8 +10,18 @@ const FutureCard = ({cityWeatherFuture}) => {
             justifyContent : 'space-around',
             alignItems : 'center',
             flexDirection : 'column',
-            width : '120px',
-            height : '120px',
+            width : {
+                xs : '65px',
+                sm : "90px",
+                md : '100px',
+                lg : '120px'
+            },
+            height : {
+                xs : '65px',
+                sm : "90px",
+                md : '100px',
+                lg : '120px'
+            },
             backgroundColor : '#6a6a6a38',
             backdropFilter : 'blur(20px)',
             borderRadius : '10px'

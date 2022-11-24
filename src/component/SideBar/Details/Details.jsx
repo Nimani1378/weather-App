@@ -1,7 +1,4 @@
 import Stack from "@mui/material/Stack";
-import Select from '@mui/material/Select';
-import { Cities } from "../../../data/cities";
-import { CustomTextField } from "../../../material/CustomTextField";
 import { Typography } from "@mui/material";
 
 const Details = ({ city, cityWeather }) => {
