@@ -33,7 +33,7 @@ const Loading = () => {
                 alignItems: 'center',
                 direction: 'row'
             }}>
-                <Typography variant="h2" color='white'>BitBarg</Typography>
+                <Typography variant="h2" color='white'>WeatherApp</Typography>
                 <CircularProgress color="error" size={100} />
             </Stack>
         )
