@@ -18,7 +18,7 @@ const FiveDays = ({city}) => {
           });
     }, [city])
     return(
-        <Stack gap={3} direction='row' justifyContent={'center'}>
+        <Stack gap={3} paddingX = {4} flexWrap='wrap' direction='row' justifyContent={'center'}>
             {daysIndex.map(index => <WeatherFutureCard key={index} cityWeatherFuture={cityWeatherFuture[index]}/>)}
         </Stack>
     )

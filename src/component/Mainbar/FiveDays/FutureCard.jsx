@@ -11,13 +11,13 @@ const FutureCard = ({cityWeatherFuture}) => {
             alignItems : 'center',
             flexDirection : 'column',
             width : {
-                xs : '65px',
+                xs : '80px',
                 sm : "90px",
                 md : '100px',
                 lg : '120px'
             },
             height : {
-                xs : '65px',
+                xs : '80px',
                 sm : "90px",
                 md : '100px',
                 lg : '120px'
