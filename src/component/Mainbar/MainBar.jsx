@@ -40,14 +40,18 @@ const MainBar = ({ cityWeather, weather5 }) => {
                     },
                     width : {
                         xs : '100%',
-                        sm : 'auto'
+                        md : 'auto'
                     }
 
                 }}>
                     {`${cityWeather?.main?.temp}°`}
                 </Typography>
-                <Stack sx={{
+                <Stack alignItems={'center'} sx={{
                     color: 'text.primary',
+                    width : {
+                        xs : '100%',
+                        md : 'auto'
+                    }
                 }}>
                     <Typography variant="h3" sx={{
                         fontSize : {
