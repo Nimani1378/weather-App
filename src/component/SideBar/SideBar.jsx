@@ -8,7 +8,7 @@ const SideBar = ({ currency, setCurrency, cityWeather }) => {
 
     return (
         <Grid item md={5} xs={12} direction="column" sx={{
-            height: '100vh',
+            minHeight: '100vh',
             backgroundColor: '#0000001c',
             backdropFilter: 'blur(20px)',
             paddingX: '3%'

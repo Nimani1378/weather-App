@@ -28,7 +28,7 @@ const Loading = () => {
     }
     else {
         return (
-            <Stack spacing={4} sx={{
+            <Stack padding={4} spacing={4} sx={{
                 display: 'flex',
                 width: '100%',
                 height: '100vh',
@@ -36,7 +36,9 @@ const Loading = () => {
                 alignItems: 'center',
                 direction: 'row'
             }}>
-                <Typography variant="h2" color='white' padding={4}>WeatherApp</Typography>
+                <Typography variant="h2" color='white'>WeatherApp</Typography>
+                <Typography variant="body" color='white'>If the page does not load,Please use vpn
+</Typography>
                 <CircularProgress color="error" size={100} />
             </Stack>
         )
