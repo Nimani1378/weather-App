@@ -5,7 +5,7 @@ import FiveDays from "./FiveDays/FiveDays";
 import { ColorModeContext } from "../../App";
 
 
-const MainBar = ({ cityWeather, currency }) => {
+const MainBar = ({ cityWeather, weather5 }) => {
     const {toggleColorMode} = useContext(ColorModeContext);
     let today = new Date();
     let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
@@ -68,7 +68,7 @@ const MainBar = ({ cityWeather, currency }) => {
                 </Typography>
 
             </Stack>
-            <FiveDays city={currency} />
+            <FiveDays weather5={weather5}/>
 
         </Grid>
     )
