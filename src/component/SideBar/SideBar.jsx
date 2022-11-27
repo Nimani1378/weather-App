@@ -18,7 +18,8 @@ const SideBar = ({ currency, setCurrency, cityWeather }) => {
                     xs : 'auto' ,
                     md : '100vh'
                 },
-                width: "100%"
+                width: "100%",
+                padding : '20px'
             }}>
                 <SelectCity1 currency={currency} setCurrency={setCurrency} />
                 <Divider sx={{
