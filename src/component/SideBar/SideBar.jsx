@@ -11,7 +11,7 @@ const SideBar = ({ currency, setCurrency, cityWeather }) => {
             minHeight: '100vh',
             backgroundColor: '#0000001c',
             backdropFilter: 'blur(20px)',
-            paddingX: '3%'
+            padding: '3%',
         }}>
             <Stack gap={4} justifyContent="center" sx={{
                 height: {
@@ -19,7 +19,6 @@ const SideBar = ({ currency, setCurrency, cityWeather }) => {
                     md : '100vh'
                 },
                 width: "100%",
-                padding : '20px'
             }}>
                 <SelectCity1 currency={currency} setCurrency={setCurrency} />
                 <Divider sx={{
