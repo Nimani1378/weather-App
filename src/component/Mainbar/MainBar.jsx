@@ -16,12 +16,13 @@ const MainBar = ({ cityWeather, weather5 }) => {
     return (
         <Grid sx={{
             minHeight : '100vh',
-            
+            paddingBottom: '20px'
         }} item md={7} xs={12}>
             <Stack sx={{
                 height: {
-                    xs : '30vh',
+                    xs : '15vh',
                     md : '48vh'}
+                
             }} />
             {/* <Button onClick={()=>{toggleColorMode()}}>toggle</Button> */}
             <Stack direction="row" gap={2} sx={{

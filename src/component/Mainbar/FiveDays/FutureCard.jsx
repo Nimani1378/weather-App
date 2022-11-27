@@ -13,14 +13,14 @@ const FutureCard = ({cityWeatherFuture}) => {
             width : {
                 xs : '80px',
                 sm : "90px",
-                md : '100px',
-                lg : '120px'
+                md : '90px',
+                lg : '100px'
             },
             height : {
                 xs : '80px',
                 sm : "90px",
-                md : '100px',
-                lg : '120px'
+                md : '90px',
+                lg : '100px'
             },
             backgroundColor : '#6a6a6a38',
             backdropFilter : 'blur(20px)',
